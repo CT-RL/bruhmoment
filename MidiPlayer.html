@@ -1,6 +1,52 @@
+<head>
+      <title>Midi Player</title>
+   </head>
+ <body style="background-color:#2f3a82;">
 <script src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.23.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.4.0"></script>
+   
+<main id="content" class="main-content" role="main">
+      <div>
+<midi-visualizer type="piano-roll" id="mainVisualizer" src="https://cdn.jsdelivr.net/gh/cifkao/html-midi-player@2b12128/jazz.mid"></midi-visualizer>
+<midi-player src="https://cdn.jsdelivr.net/gh/cifkao/html-midi-player@2b12128/jazz.mid" sound-font="" visualizer="#mainVisualizer" id="mainPlayer">
+</midi-player>
+</div>
+
+<p>
+<label for="midiFile">Load MIDI file:</label>
+<input type="file" id="midiFile" name="midiFile" accept="audio/midi, audio/x-midi" />
+</p>
+
+  <midi-player
+  src="https://cdn.jsdelivr.net/gh/cifkao/html-midi-player@2b12128/twinkle_twinkle.mid"
+  sound-font visualizer="#myStaffVisualizer">
+</midi-player>
+
+<midi-visualizer type="staff" id="myStaffVisualizer" 
+  src="https://cdn.jsdelivr.net/gh/cifkao/html-midi-player@2b12128/twinkle_twinkle.mid">
+</midi-visualizer>
+  <script src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.23.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.5.0"></script>
+
+
+<section id="section2">
+<h2>2 players, 1 visualizer</h2>
 <midi-player
+  src="https://cdn.jsdelivr.net/gh/cifkao/html-midi-player@2b12128/twinkle_twinkle.mid"
+  sound-font visualizer="#section2 midi-visualizer">
+</midi-player>
+<midi-player
+  src="https://cdn.jsdelivr.net/gh/magenta/magenta-js@571b384/music/demos/melody.mid"
+  sound-font visualizer="#section2 midi-visualizer">
+</midi-player>
+<midi-visualizer
+  type="piano-roll">
+</midi-visualizer>
+</section>
+
+<script src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.23.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.5.0"></script>
+  
+   <midi-player
   src="https://magenta.github.io/magenta-js/music/demos/melody.mid"
   sound-font visualizer="#myVisualizer">
+     
 </midi-player>
 <midi-visualizer type="piano-roll" id="myVisualizer"></midi-visualizer>
